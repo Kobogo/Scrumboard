@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(128, 124, 203);
+  background: linear-gradient(
+    90deg,
+    rgba(128, 124, 203, 1) 0%,
+    rgba(9, 121, 103, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+nav {
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.submit-button {
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: rgba(0, 212, 255, 1);
+  background-color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: rgba(0, 212, 255, 1);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+/* ======================== The pop up menu =========================================*/
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid #333;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #fff;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  background-color: rgba(0, 212, 255, 1);
+  border-radius: 10px;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .title-text {
+  width: 80%;
+  border: none;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+.modal-body .description {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.modal-body .description-textarea {
+  width: 100%;
+}
+
+.modal-body .create-button {
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: rgba(0, 212, 255, 1);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body .create-button:hover {
+  cursor: pointer;
+  border: none;
+  color: rgba(0, 212, 255, 1);
+  background-color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+/* =========================== The three boxes ======================================*/
+.container {
+  display: flex;
+  width: 100%;
+}
+
+#to-do-box {
+  background-color: #fff;
+  opacity: 0.5;
+  width: 30vw;
+  height: 80vh;
+  margin: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+  overflow: hidden scroll;
+}
+
+.in-Progress-box {
+  background-color: #fff;
+  opacity: 0.5;
+  width: 30vw;
+  height: 80vh;
+  margin: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+  overflow: hidden scroll;
+}
+
+.done-box {
+  background-color: #fff;
+  opacity: 0.5;
+  width: 30vw;
+  height: 80vh;
+  margin: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 1rem;
+  overflow: hidden scroll;
+}
+
+.box h2 {
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========================== List items =======================================*/
+
+.list-item {
+  background-color: rgb(141, 235, 241);
+  width: 90%;
+  height: 150px;
+  margin: 10px;
+  padding: 0;
+  border-radius: 5px;
+  list-style: none;
+  overflow: hidden;
+  cursor: move;
+}
+
+.title-item {
+  font-size: 1.25rem;
+  font-style: bold;
+  margin-bottom: 1rem;
+}
+
+.fa-trash {
+  font-size: 1.25rem;
+  margin: 1rem;
+  pointer-events: none;
+}
+
+.draggable.dragging {
+  background-color: rgb(128, 124, 203);
+}

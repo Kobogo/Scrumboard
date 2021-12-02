@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/b3c86c2806.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Scrum board</title>
+  </head>
+  <body>
+    <header>
+      <h1>Scrum board</h1>
+      <nav>
+        <button data-modal-target="#modal" class="submit-button">submit</button>
+      </nav>
+    </header>
+    <!--MODAL-->
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Title</div>
+        <input type="text" name="Title" class="title-text" />
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="description">Description</div>
+        ¨
+        <textarea class="description-textarea" rows="10"></textarea>
+        <button class="create-button" type="submit">Submit</button>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <!--TO DO BOX-->
+    <div class="container">
+      <div class="containerBox" id="to-do-box">
+        <h2>To Do</h2>
+        <div class="list-start"></div>
+      </div>
+      <!--IN PROGRESS-->
+      <div class="in-Progress-box containerBox">
+        <h2>In Progress</h2>
+        <div class="list-item draggable" draggable="true">
+          <p class="title-item">Hardcoded test2</p>
+          <p class="description-item">Description</p>
+          <button class="trashButton">
+            <i class="fas fa-trash" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <!--DONE-->
+      <div class="done-box containerBox">
+        <h2>Done</h2>
+        <div class="list-item draggable" draggable="true">
+          <p class="title-item">Hardcoded test</p>
+          <p class="description-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            rerum vel dolores debitis et quia incidunt numquam, ex tempora.
+            Praesentium placeat provident magnam dolorum assumenda, quam
+            doloremque eaque sint nemo illum? Provident veritatis asperiores nam
+            perspiciatis aliquam dolor sed corporis inventore earum! Nam
+            impedit, quae deleniti amet distinctio iste iusto.
+          </p>
+          <button class="trashButton">
+            <i class="fas fa-trash" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="test.js" type="module"></script>
+  </body>
+</html>
